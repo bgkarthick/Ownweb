@@ -85,3 +85,220 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--muted)
 }
 .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Mobile polish update */
+@media (max-width: 820px) {
+  body {
+    background: radial-gradient(circle at top left, rgba(85,214,190,.16), transparent 26%), var(--bg);
+  }
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+  .site-header {
+    position: sticky;
+  }
+  .nav {
+    min-height: 64px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+  .nav-links {
+    top: 66px;
+    left: 14px;
+    right: 14px;
+    padding: 16px;
+    gap: 12px;
+    box-shadow: 0 22px 50px rgba(0,0,0,.38);
+  }
+  .nav-links a {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.04);
+  }
+  .nav-links .btn-small {
+    padding: 12px 14px;
+    width: 100%;
+  }
+  .hero {
+    padding-top: 42px;
+  }
+  .hero-grid {
+    gap: 24px;
+  }
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+    letter-spacing: -.045em;
+  }
+  h2 {
+    font-size: clamp(1.75rem, 8.5vw, 2.45rem);
+    letter-spacing: -.035em;
+  }
+  h3 {
+    font-size: 1.12rem;
+  }
+  .lead {
+    font-size: 1.04rem;
+    margin-top: 18px;
+  }
+  .eyebrow {
+    font-size: .72rem;
+    letter-spacing: .11em;
+  }
+  .hero-actions,
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 16px;
+  }
+  .hero-card,
+  .content-card,
+  .project-card,
+  .skill-card,
+  .contact-card {
+    border-radius: 22px;
+  }
+  .hero-card,
+  .content-card,
+  .project-card,
+  .skill-card {
+    padding: 22px;
+  }
+  .hero-card h2 {
+    font-size: 1.65rem;
+  }
+  .profile-avatar {
+    width: 68px;
+    height: 68px;
+    font-size: 1.45rem;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .quick-stats span {
+    padding: 12px 6px;
+    border-radius: 14px;
+    font-size: .74rem;
+  }
+  .quick-stats strong {
+    font-size: .96rem;
+  }
+  .trust-strip {
+    padding: 14px 0;
+  }
+  .strip-grid {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 3px;
+    scrollbar-width: none;
+  }
+  .strip-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .strip-grid span {
+    flex: 0 0 auto;
+    padding: 9px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.05);
+    font-size: .86rem;
+  }
+  .two-col {
+    gap: 22px;
+  }
+  .section {
+    padding: 54px 0;
+  }
+  .section-heading {
+    margin-bottom: 22px;
+  }
+  .project-grid,
+  .skills-grid {
+    gap: 16px;
+  }
+  ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+  }
+  .flow {
+    grid-template-columns: 1fr;
+    overflow: visible;
+    gap: 8px;
+  }
+  .flow div {
+    min-width: 0;
+    width: 100%;
+    padding: 17px 16px;
+    border-radius: 18px;
+  }
+  .flow span {
+    transform: rotate(90deg);
+    justify-self: center;
+    line-height: 1;
+  }
+  .timeline {
+    gap: 14px;
+  }
+  .timeline-item {
+    padding: 20px;
+    border-left-width: 3px;
+    border-radius: 0 20px 20px 0;
+  }
+  .contact-section {
+    padding-bottom: 70px;
+  }
+  .contact-card {
+    padding: 30px 20px;
+    text-align: left;
+  }
+  .contact-card h2 {
+    margin: 0;
+  }
+  .contact-actions {
+    justify-content: stretch;
+  }
+  .footer-inner {
+    display: grid;
+    gap: 8px;
+    font-size: .88rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: min(100% - 24px, 1120px);
+  }
+  .hero-card,
+  .content-card,
+  .project-card,
+  .skill-card {
+    padding: 20px;
+  }
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+  .quick-stats span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 12px 14px;
+  }
+  .quick-stats strong {
+    display: inline;
+    font-size: 1rem;
+  }
+}
