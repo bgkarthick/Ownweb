@@ -21,7 +21,7 @@
         <a href="#capabilities">Capabilities</a>
         <a href="#technology">Technology</a>
         <a href="#career">Career</a>
-        <a href="#work">Selected Work</a>
+        <a href="#work">Delivery Stories</a>
         <a href="#leadership">Leadership</a>
         <a class="nav-resume" href="Karthick_Tech_Lead.pdf" download>Resume ↗</a>
       </div>
@@ -38,7 +38,7 @@
           <h1>Enterprise Data Delivery Leader</h1>
           <p class="hero-lead">I help organisations modernise, migrate and trust their data by combining hands-on technical expertise, delivery leadership and strong stakeholder collaboration.</p>
           <div class="hero-actions">
-            <a class="button button-dark" href="#work">Explore selected work</a>
+            <a class="button button-dark" href="#work">Explore delivery stories</a>
             <a class="button button-light" href="Karthick_Tech_Lead.pdf" download>Download resume</a>
           </div>
         </div>
@@ -130,57 +130,243 @@
       </div>
     </section>
 
-    <section id="work" class="section shell">
-      <div class="section-grid">
-        <div class="section-title reveal">
-          <p class="overline">05 · Selected Work</p>
-          <h2>How do I turn complexity into outcomes?</h2>
-          <p class="section-note">Portfolio-level case studies showing how I approach delivery, technical quality and stakeholder alignment without exposing confidential information.</p>
+    <section id="work" class="section delivery-stories-section">
+      <div class="shell">
+        <div class="delivery-intro reveal">
+          <p class="overline">05 · Delivery Stories</p>
+          <div class="delivery-intro-grid">
+            <h2>Real programmes.<br>Real problems.<br>Real outcomes.</h2>
+            <p>Selected enterprise data programmes showing how I combine hands-on technical delivery, business engagement and leadership to move complex transformation work forward.</p>
+          </div>
         </div>
-        <div class="work-list reveal">
-          <article class="work-item featured">
-            <div class="work-index">01</div>
-            <div class="work-main">
-              <p class="work-meta">Australian Unity · MDM & Data Quality</p>
-              <h3>Guardian — enterprise data quality and master data delivery</h3>
-              <p>Led delivery and validation across ingestion, data quality, master data and downstream consumption layers, connecting technical controls with business acceptance and release confidence.</p>
-              <div class="work-tags"><span>AWS</span><span>Airflow</span><span>MDM</span><span>Salesforce</span><span>SQL</span></div>
+
+        <div class="story-list reveal">
+          <article class="story story-open">
+            <button class="story-summary" type="button" aria-expanded="true" aria-controls="story-01-content">
+              <span class="story-number">Project 01</span>
+              <span class="story-heading">
+                <span class="story-client">Australian Unity · Aged Care</span>
+                <strong>Workforce Optimisation &amp; Salesforce Transformation</strong>
+                <small>Modernising workforce scheduling while preparing the organisation's next-generation care platform.</small>
+              </span>
+              <span class="story-toggle" aria-hidden="true">−</span>
+            </button>
+
+            <div class="story-content" id="story-01-content">
+              <div class="story-hero">
+                <p class="story-kicker">Programme overview</p>
+                <p class="story-opening">Australian Unity needed to improve daily care-worker rostering while migrating customer and workforce capabilities from a legacy platform into Salesforce. Because both initiatives depended on the same operational data, the rostering solution, migration programme and business-readiness activities had to progress together.</p>
+              </div>
+
+              <section class="story-block story-challenge">
+                <div class="story-label">
+                  <span>01</span>
+                  <h3>Business Need</h3>
+                </div>
+                <div class="story-body">
+                  <div class="challenge-grid">
+                    <div>
+                      <strong>Smarter daily rostering</strong>
+                      <p>Provide an effective scheduling solution for care workers and customers, balancing service requirements, worker availability and operational cost.</p>
+                    </div>
+                    <div>
+                      <strong>Legacy-to-Salesforce transformation</strong>
+                      <p>Migrate customer and care-worker capabilities across clinical and non-clinical service categories while retaining the required rostering functionality.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="story-block">
+                <div class="story-label">
+                  <span>02</span>
+                  <h3>My Role</h3>
+                </div>
+                <div class="story-body role-columns">
+                  <div>
+                    <p class="mini-label">Delivery leadership</p>
+                    <ul class="clean-list">
+                      <li>Worked across operations, product owners, SMEs, engineering, integration teams and the external rostering vendor.</li>
+                      <li>Coordinated migration validation, system testing, BAT, UAT and dress-rehearsal activities.</li>
+                      <li>Led Jira and Zephyr workshops, reviewed scenarios and evidence, managed defects and supported business sign-off.</li>
+                      <li>Maintained programme artefacts, traceability and reporting through Jira, Confluence and consolidated Excel reporting.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="mini-label">Hands-on contribution</p>
+                    <ul class="clean-list">
+                      <li>SQL stored procedures, automated CSV extraction and SQL Agent scheduling.</li>
+                      <li>Python file processing, secure SFTP workflows and operational reprocessing.</li>
+                      <li>Tableau data-quality, availability and KPI dashboards.</li>
+                      <li>Salesforce functional validation, QuerySurge comparisons and migration checks.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="story-block story-narrative">
+                <div class="story-label">
+                  <span>03</span>
+                  <h3>Building the Rostering Data Flow</h3>
+                </div>
+                <div class="story-body">
+                  <p>Australian Unity engaged Biarri to support workforce rostering. I validated the business requirements and designed the data-supply process required to feed the solution from the legacy SQL Server environment.</p>
+                  <p>I replaced the existing master extraction procedure with a customised stored procedure that returned only the data required for rostering. The output was generated as CSV files through Python and scheduled through SQL Server Agent to run each morning at 6:00 am.</p>
+
+                  <div class="flow" aria-label="Rostering data flow">
+                    <span>Legacy SQL Server</span><i>→</i>
+                    <span>Custom Stored Procedure</span><i>→</i>
+                    <span>Python CSV Processing</span><i>→</i>
+                    <span>SQL Agent</span><i>→</i>
+                    <span>SFTP</span><i>→</i>
+                    <span>Biarri</span>
+                  </div>
+
+                  <p>I coordinated the secure SFTP setup between Australian Unity and Biarri so that input files could be transferred for processing and completed output files returned for downstream use.</p>
+                </div>
+              </section>
+
+              <section class="story-block story-highlight">
+                <div class="story-label">
+                  <span>04</span>
+                  <h3>Turning Poor Data into Trusted Data</h3>
+                </div>
+                <div class="story-body">
+                  <p class="highlight-lead">When the scheduling outcomes were inconsistent, I did not treat the problem as an optimisation-engine defect. I traced the issue back through the data flow and identified widespread source-data quality problems.</p>
+                  <div class="issue-list">
+                    <span>Missing mandatory data</span>
+                    <span>Incorrect source values</span>
+                    <span>Wrong field mappings</span>
+                    <span>Incomplete onboarding records</span>
+                  </div>
+                  <p>I developed Tableau dashboards that exposed these issues directly to operations teams so that records could be corrected in the source system as part of an ongoing process rather than through one-off cleansing.</p>
+                  <p>I also recommended updates to the onboarding standard operating procedures for new customers and care workers. This reduced recurring data gaps and improved the quality of information supplied to the rostering solution.</p>
+                </div>
+              </section>
+
+              <section class="story-block">
+                <div class="story-label">
+                  <span>05</span>
+                  <h3>Operational Automation Across 24 Branches</h3>
+                </div>
+                <div class="story-body">
+                  <p>Returned Biarri files arrived as compressed outputs. I created Python and SQL Agent processes to extract the files, reprocess them, add protected health information that was intentionally excluded from the vendor input, refresh dashboard datasets and place the final outputs into a controlled reprocessed location.</p>
+                  <p>I then coordinated with the WebMethods team to automate delivery of the reprocessed files into the relevant SharePoint location for each branch.</p>
+
+                  <div class="impact-band">
+                    <div><strong>24</strong><span>Branches supported</span></div>
+                    <div><strong>3</strong><span>Run frequencies</span></div>
+                    <div><strong>Daily · Weekly · Fortnightly</strong><span>Scenario-based processing</span></div>
+                  </div>
+
+                  <div class="flow flow-secondary" aria-label="Operational output flow">
+                    <span>Biarri Output</span><i>→</i>
+                    <span>Python Extraction</span><i>→</i>
+                    <span>PHI Reprocessing</span><i>→</i>
+                    <span>Dashboard Refresh</span><i>→</i>
+                    <span>WebMethods</span><i>→</i>
+                    <span>Branch SharePoint</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="story-block story-salesforce">
+                <div class="story-label">
+                  <span>06</span>
+                  <h3>Salesforce Transformation</h3>
+                </div>
+                <div class="story-body">
+                  <p>While the rostering solution supported the legacy platform, Australian Unity was also migrating care-worker and customer capabilities into Salesforce. The non-clinical service category needed to retain the Biarri scheduling model after migration, even though Salesforce provided its own scheduling engine.</p>
+                  <p>I contributed to source-to-target mapping and coordinated with Biarri and internal teams to prepare the rostering integration in parallel with the Salesforce migration.</p>
+
+                  <div class="delivery-steps">
+                    <div><span>01</span><strong>Requirements &amp; mapping</strong><p>Reviewed migration and scheduling requirements and supported source-to-target alignment.</p></div>
+                    <div><span>02</span><strong>System testing</strong><p>Briefed offshore testers, reviewed test cases and evidence, and triaged defects with development teams.</p></div>
+                    <div><span>03</span><strong>Integration validation</strong><p>Validated connectivity, configuration and Biarri scheduling outcomes within the Salesforce landscape.</p></div>
+                    <div><span>04</span><strong>UAT &amp; BAT</strong><p>Facilitated Jira workshops, scenario development, review, execution, sign-off and test-summary reporting.</p></div>
+                    <div><span>05</span><strong>Dress rehearsals</strong><p>Managed Jira execution cards and dashboards to provide clear progress visibility across end-to-end scenarios.</p></div>
+                  </div>
+
+                  <p>I also acted as the business-analysis lead for end-to-end BAT across scheduling and service-delivery modules, working with product owners and SMEs to create migration scenarios for dress rehearsals. Testing was managed through Jira and Zephyr, with supporting artefacts maintained in Confluence.</p>
+                </div>
+              </section>
+
+              <section class="story-block">
+                <div class="story-label">
+                  <span>07</span>
+                  <h3>Business Impact</h3>
+                </div>
+                <div class="story-body impact-copy">
+                  <p>The programme established an automated workforce-rostering data flow supported by improved source quality, operational monitoring and repeatable branch-level processing.</p>
+                  <p>It also enabled the rostering capability to progress alongside the Salesforce migration, supported business readiness through structured BAT and UAT, and provided management visibility through Jira, Tableau and consolidated status reporting.</p>
+                </div>
+              </section>
+
+              <section class="story-block">
+                <div class="story-label">
+                  <span>08</span>
+                  <h3>Technology</h3>
+                </div>
+                <div class="story-body">
+                  <div class="technology-pills">
+                    <span>SQL Server</span><span>Stored Procedures</span><span>Python</span>
+                    <span>SQL Server Agent</span><span>Tableau</span><span>Salesforce</span>
+                    <span>SFTP</span><span>WebMethods</span><span>SharePoint</span>
+                    <span>Jira</span><span>Zephyr</span><span>Confluence</span>
+                    <span>QuerySurge</span><span>Excel</span><span>Biarri</span>
+                  </div>
+                  <a class="external-story-link" href="https://biarri.com/biarri_case_studies/home-care-scheduling-rostering/" target="_blank" rel="noopener">
+                    View the vendor's published home-care scheduling case study <span>↗</span>
+                  </a>
+                </div>
+              </section>
+
+              <section class="story-learning">
+                <p class="mini-label">Key learning</p>
+                <blockquote>Enterprise transformations succeed when technology, operational processes, data quality and stakeholder alignment improve together.</blockquote>
+              </section>
             </div>
-            <span class="work-arrow">↗</span>
           </article>
-          <article class="work-item">
-            <div class="work-index">02</div>
-            <div class="work-main">
-              <p class="work-meta">Australian Unity · Aged Care</p>
-              <h3>Team Based Care — workforce optimisation and analytics</h3>
-              <p>Supported migration, optimisation, data quality and reporting across workforce demand, availability, skills, awards and operational outcomes.</p>
-              <div class="work-tags"><span>Tableau</span><span>Python</span><span>SQL</span><span>Data Migration</span></div>
-            </div>
-            <span class="work-arrow">↗</span>
+
+          <article class="story story-placeholder">
+            <button class="story-summary" type="button" aria-expanded="false" disabled>
+              <span class="story-number">Project 02</span>
+              <span class="story-heading">
+                <span class="story-client">Delivery story coming next</span>
+                <strong>Enterprise Data Quality &amp; Master Data</strong>
+                <small>This story will be added in the next content release.</small>
+              </span>
+              <span class="story-status">Coming soon</span>
+            </button>
           </article>
-          <article class="work-item">
-            <div class="work-index">03</div>
-            <div class="work-main">
-              <p class="work-meta">Australian Unity · EDW & BI</p>
-              <h3>Ruby — enterprise data warehouse and reporting delivery</h3>
-              <p>Coordinated validation across ingestion, transformation, warehouse and reporting layers to support reliable BI consumption.</p>
-              <div class="work-tags"><span>EDW</span><span>ETL</span><span>BI</span><span>Reconciliation</span></div>
-            </div>
-            <span class="work-arrow">↗</span>
+
+          <article class="story story-placeholder">
+            <button class="story-summary" type="button" aria-expanded="false" disabled>
+              <span class="story-number">Project 03</span>
+              <span class="story-heading">
+                <span class="story-client">Delivery story coming next</span>
+                <strong>Enterprise Data Warehouse &amp; Reporting</strong>
+                <small>This story will be added in the next content release.</small>
+              </span>
+              <span class="story-status">Coming soon</span>
+            </button>
           </article>
-          <article class="work-item">
-            <div class="work-index">04</div>
-            <div class="work-main">
-              <p class="work-meta">AIA Australia · Insurance</p>
-              <h3>Halley & Salesforce — data warehouse integration and migration</h3>
-              <p>Validated insurance data movement, transformation logic and release readiness across legacy, warehouse and CRM environments.</p>
-              <div class="work-tags"><span>DB2</span><span>Salesforce</span><span>SQL</span><span>Agile Delivery</span></div>
-            </div>
-            <span class="work-arrow">↗</span>
+
+          <article class="story story-placeholder">
+            <button class="story-summary" type="button" aria-expanded="false" disabled>
+              <span class="story-number">Project 04</span>
+              <span class="story-heading">
+                <span class="story-client">Delivery story coming next</span>
+                <strong>Insurance Data Integration &amp; Migration</strong>
+                <small>This story will be added in the next content release.</small>
+              </span>
+              <span class="story-status">Coming soon</span>
+            </button>
           </article>
         </div>
       </div>
     </section>
+
 
     <section class="section process-section">
       <div class="shell">

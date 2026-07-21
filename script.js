@@ -13,6 +13,16 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
+document.querySelectorAll(".story:not(.story-placeholder) .story-summary").forEach(button => {
+  button.addEventListener("click", () => {
+    const story = button.closest(".story");
+    const isOpen = story.classList.toggle("story-open");
+    button.setAttribute("aria-expanded", String(isOpen));
+    const toggle = button.querySelector(".story-toggle");
+    if (toggle) toggle.textContent = isOpen ? "−" : "+";
+  });
+});
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
