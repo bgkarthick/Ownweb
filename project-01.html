@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Project 01 | Workforce Optimisation & Salesforce Transformation</title>
+<meta name="description" content="Delivery story covering workforce optimisation, data quality and Salesforce transformation in aged care.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="story.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav shell"><a class="brand" href="index.html">KB</a><div class="story-nav-actions"><a href="index.html#work">All Delivery Stories</a><a class="nav-resume" href="Karthick_Tech_Lead.pdf" download>Resume ↗</a></div></nav></header>
+<main class="story-page">
+<section class="story-page-hero shell">
+<a class="back-link" href="index.html#work">← Back to Delivery Stories</a>
+<div class="story-page-meta"><span>Project 01</span><span>Australian Unity</span><span>Aged Care</span></div>
+<h1>Workforce Optimisation &amp; Salesforce Transformation</h1>
+<p class="story-page-deck">Improving daily care-worker scheduling, strengthening source-data quality and preparing operational capabilities for migration into Salesforce.</p>
+<div class="story-page-tags"><span>Data Migration</span><span>Data Quality</span><span>Salesforce</span><span>Python</span><span>Tableau</span><span>Vendor Integration</span></div>
+</section>
+
+<section class="story-page-section shell"><div class="story-page-grid">
+<div class="story-page-label"><span>01</span><h2>The Challenge</h2></div>
+<div class="story-page-copy"><p class="lead">Australian Unity needed to improve daily rostering for care workers and customers while also migrating workforce and customer capabilities from a legacy platform into Salesforce.</p>
+<div class="story-two-col"><div><h3>Smarter rostering</h3><p>Create a more effective scheduling solution balancing customer needs, worker availability and operational cost.</p></div><div><h3>Salesforce readiness</h3><p>Migrate clinical and non-clinical capabilities without losing required rostering functionality.</p></div></div></div>
+</div></section>
+
+<section class="story-page-section story-soft shell"><div class="story-page-grid">
+<div class="story-page-label"><span>02</span><h2>How I Contributed</h2></div>
+<div class="story-page-copy"><div class="story-two-col role-cards"><div><p class="mini-label">Delivery leadership</p><ul><li>Coordinated operations, product owners, SMEs, engineers, testers, integration teams and the external vendor.</li><li>Led BAT, UAT, dress rehearsals, Jira workshops, defect triage and sign-off activities.</li><li>Reviewed requirements, test scenarios, evidence and delivery status.</li></ul></div><div><p class="mini-label">Hands-on delivery</p><ul><li>Developed SQL stored procedures, Python processing and SQL Agent scheduling.</li><li>Built Tableau data-quality, KPI and availability dashboards.</li><li>Performed Salesforce validation, QuerySurge comparisons and migration checks.</li></ul></div></div></div>
+</div></section>
+
+<section class="story-page-section shell"><div class="story-page-grid">
+<div class="story-page-label"><span>03</span><h2>Building the Rostering Data Flow</h2></div>
+<div class="story-page-copy"><p>Australian Unity engaged Biarri to support workforce rostering. I validated the business requirements and designed the daily data-supply process from the legacy SQL Server environment.</p><p>I replaced the existing master extraction procedure with a customised stored procedure returning only the required data. Python generated the CSV outputs, while SQL Server Agent scheduled the process for 6:00 am each morning.</p>
+<div class="story-flow vertical-mobile"><span>Legacy SQL Server</span><i>→</i><span>Custom Stored Procedure</span><i>→</i><span>Python CSV Processing</span><i>→</i><span>SQL Agent</span><i>→</i><span>SFTP</span><i>→</i><span>Biarri</span></div>
+<p>I also coordinated secure SFTP setup so input files could be sent to Biarri and processed results returned.</p></div>
+</div></section>
+
+<section class="story-page-section turning-point shell"><div class="story-page-grid">
+<div class="story-page-label"><span>04</span><h2>A Turning Point</h2></div>
+<div class="story-page-copy"><p class="lead">When scheduling outcomes were inconsistent, I traced the issue through the data flow and found that the main problem was not the optimisation engine—it was poor source-data quality.</p>
+<div class="issue-cards"><div><strong>Missing data</strong><span>Mandatory attributes were incomplete.</span></div><div><strong>Incorrect values</strong><span>Source records contained invalid information.</span></div><div><strong>Wrong mappings</strong><span>Some fields were aligned incorrectly.</span></div><div><strong>Onboarding gaps</strong><span>New records were not always complete.</span></div></div>
+<div class="turning-point-actions"><div><span>What I changed</span><p>Built Tableau dashboards showing data issues directly to operations teams.</p></div><div><span>Process improvement</span><p>Recommended onboarding procedure updates for new customers and care workers.</p></div><div><span>Result</span><p>Improved data supplied to the rostering solution and reduced recurring issues.</p></div></div></div>
+</div></section>
+
+<section class="story-page-section shell"><div class="story-page-grid">
+<div class="story-page-label"><span>05</span><h2>Operational Automation</h2></div>
+<div class="story-page-copy"><p>Biarri returned compressed output files. I created Python and SQL Agent processes to extract and reprocess them, add protected health information deliberately excluded from vendor input, refresh dashboard datasets and place final files into a controlled location.</p><p>I then worked with the WebMethods team to automate delivery into the correct SharePoint location for each branch.</p>
+<div class="story-metrics"><div><strong>24</strong><span>Branches supported</span></div><div><strong>3</strong><span>Run frequencies</span></div><div><strong>Daily · Weekly · Fortnightly</strong><span>Scenario-based processing</span></div></div></div>
+</div></section>
+
+<section class="story-page-section salesforce-journey shell"><div class="story-page-grid">
+<div class="story-page-label"><span>06</span><h2>Salesforce Transformation</h2></div>
+<div class="story-page-copy"><p>While the rostering solution supported the legacy platform, Australian Unity was also migrating customer and care-worker capabilities into Salesforce. The non-clinical category needed to retain the Biarri scheduling model after migration.</p>
+<div class="vertical-timeline"><article><span>01</span><div><h3>Requirements &amp; mapping</h3><p>Reviewed scheduling and migration requirements and supported source-to-target alignment.</p></div></article><article><span>02</span><div><h3>System testing</h3><p>Briefed offshore testers, reviewed test cases and evidence, and triaged defects.</p></div></article><article><span>03</span><div><h3>Integration validation</h3><p>Validated connectivity, configuration and Biarri outcomes within Salesforce.</p></div></article><article><span>04</span><div><h3>UAT &amp; BAT</h3><p>Facilitated Jira workshops, execution, sign-off and summary reporting.</p></div></article><article><span>05</span><div><h3>Dress rehearsals</h3><p>Managed Jira cards and dashboards for end-to-end progress visibility.</p></div></article></div>
+<p>I also acted as business-analysis lead for end-to-end BAT across scheduling and service-delivery modules. Jira, Zephyr and Confluence supported execution, traceability and artefact management.</p></div>
+</div></section>
+
+<section class="story-page-section shell"><div class="story-page-grid">
+<div class="story-page-label"><span>07</span><h2>Business Outcome</h2></div>
+<div class="story-page-copy"><p class="lead">The programme established an automated workforce-rostering data flow supported by better source quality, operational monitoring and repeatable branch-level processing.</p><p>It also enabled rostering capability to progress alongside the Salesforce migration and improved business readiness through BAT, UAT, dress rehearsals and transparent reporting.</p></div>
+</div></section>
+
+<section class="story-page-section shell"><div class="story-page-grid">
+<div class="story-page-label"><span>08</span><h2>Technology</h2></div>
+<div class="story-page-copy"><div class="technology-pills"><span>SQL Server</span><span>Stored Procedures</span><span>Python</span><span>SQL Server Agent</span><span>Tableau</span><span>Salesforce</span><span>SFTP</span><span>WebMethods</span><span>SharePoint</span><span>Jira</span><span>Zephyr</span><span>Confluence</span><span>QuerySurge</span><span>Excel</span><span>Biarri</span></div>
+<a class="external-story-link" href="https://biarri.com/biarri_case_studies/home-care-scheduling-rostering/" target="_blank" rel="noopener">View the vendor's published home-care scheduling case study <span>↗</span></a></div>
+</div></section>
+
+<section class="story-key-learning shell"><p class="mini-label">Key learning</p><blockquote>Enterprise transformations succeed when technology, operational processes, data quality and stakeholder alignment improve together.</blockquote></section>
+</main>
+<footer class="footer shell"><span>© <span id="year"></span> Gowrikarthick Balasundaram</span><span>Known professionally as Karthick Bala</span></footer>
+<script src="script.js"></script>
+</body></html>
